@@ -1,0 +1,16 @@
+[Unit]
+Description=Puma HTTP Server
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/home/bakenty/db_config
+User=bakenty
+WorkingDirectory=/home/bakenty/reddit
+ExecStart=/bin/bash 'puma'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
